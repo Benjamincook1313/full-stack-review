@@ -11,6 +11,7 @@ export default class DetailMessage extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     Axios.get(`/api/message/${this.props.match.params.id}`).then(res => {
       console.log(res.data);
       this.setState({
